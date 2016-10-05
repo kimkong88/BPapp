@@ -1,0 +1,164 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dkim.bp_app.OverviewFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:id="@+id/graph"
+        android:background="@drawable/graph_border"
+        android:layout_below="@+id/spinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Blood Pressure Checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/graph"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/textView" />
+
+    <TextView
+        android:text="Min. Blood Pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginTop="12dp"
+        android:id="@+id/textView2" />
+
+    <TextView
+        android:text="Max. Blood Pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginTop="12dp"
+        android:id="@+id/textView3" />
+
+    <TextView
+        android:text="Average Blood Pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginTop="12dp"
+        android:id="@+id/textView4" />
+
+    <TextView
+        android:text="3 Times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp"
+        android:id="@+id/txt_checked"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:text="180 BPM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignRight="@+id/txt_checked"
+        android:layout_alignEnd="@+id/txt_checked"
+        android:id="@+id/txt_minBP"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:text="185 BPM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_alignRight="@+id/txt_maxBP"
+        android:layout_alignEnd="@+id/txt_maxBP"
+        android:id="@+id/txt_avgBP"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:text="190 BPM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_maxBP"
+        android:layout_above="@+id/textView4"
+        android:layout_alignLeft="@+id/txt_minBP"
+        android:layout_alignStart="@+id/txt_minBP"
+        android:textColor="@color/colorPrimary" />
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:textAlignment="center"
+        android:entries="@array/spinnerItems"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/view"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="27dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_time"
+        android:layout_below="@+id/view"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_marginTop="16dp"
+        android:id="@+id/imageView5" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_alert"
+        android:layout_below="@+id/textView13"
+        android:layout_alignLeft="@+id/imageView5"
+        android:layout_alignStart="@+id/imageView5"
+        android:layout_marginTop="16dp"
+        android:id="@+id/imageView6" />
+
+    <TextView
+        android:text="Your heart rate has exceeded your recommended range number of times this week, Please contact your doctor."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView6"
+        android:layout_alignLeft="@+id/textView13"
+        android:layout_alignStart="@+id/textView13"
+        android:id="@+id/textView14"
+        android:layout_alignRight="@+id/textView13"
+        android:layout_alignEnd="@+id/textView13" />
+
+    <TextView
+        android:text="Your next recommended entry is at 7:00 PM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:id="@+id/textView13"
+        android:layout_alignTop="@+id/imageView5"
+        android:layout_toRightOf="@+id/imageView5"
+        android:layout_toEndOf="@+id/imageView5" />
+
+</RelativeLayout>

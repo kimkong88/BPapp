@@ -1,0 +1,7 @@
+<resources>
+    <string-array name="spinnerItems">
+        <item>Day</item>
+        <item>Week</item>
+        <item>Month</item>
+    </string-array>
+</resources>
